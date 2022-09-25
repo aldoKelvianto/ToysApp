@@ -2,7 +2,6 @@ package com.example.toysapp.feature_payment
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -12,11 +11,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.toysapp.base.KoinComposeActivity
+import com.example.toysapp.logger.Logger
+import org.koin.android.ext.android.inject
 
-class PaymentActivity : ComponentActivity() {
+class PaymentActivity : KoinComposeActivity() {
+
+    private val logger: Logger by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        logger.log("PaymentActivity - onCreate")
+
         val provider = intent.getStringExtra(KEY_PROVIDER) ?: "Empty Provider"
         setContent {
             Content(provider, ::launchToyActivity)

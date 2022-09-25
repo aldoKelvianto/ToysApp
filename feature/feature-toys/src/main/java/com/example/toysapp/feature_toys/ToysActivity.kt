@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.toysapp.base.KoinComposeActivity
+import com.example.toysapp.logger.Logger
 import com.example.toysapp.navigation.PaymentIntentProvider
 import org.koin.android.ext.android.inject
 
@@ -18,8 +19,11 @@ class ToysActivity : KoinComposeActivity() {
 
     private val paymentIntentProvider: PaymentIntentProvider by inject()
 
+    private val logger: Logger by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        logger.log("ToysActivity - onCreate")
         val name = intent.extras?.getString(KEY_NAME) ?: "Empty Name"
         setContent {
             Content(name, ::launchPaymentActivity)
