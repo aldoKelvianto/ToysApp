@@ -58,11 +58,11 @@ fun Content(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text("This is Main Activity")
-        Spacer(modifier = Modifier.height(18.dp))
+        Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onToyButtonClick) {
             Text("Go to Toy Activity")
         }
-        Spacer(modifier = Modifier.height(18.dp))
+        Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onPaymentButtonClick) {
             Text("Go to Payment Activity")
         }

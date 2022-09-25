@@ -1,6 +1,5 @@
 package com.example.toysapp.feature_payment
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,21 +12,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.toysapp.navigation.PaymentFeature
 
-class PaymentActivity: ComponentActivity(), PaymentFeature {
+class PaymentActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val provider = intent.getStringExtra(KEY_PROVIDER) ?: "Empty Provider"
         setContent {
             Content(provider, ::launchToyActivity)
-        }
-    }
-
-    override fun createPaymentFeatureIntent(context: Context, provider: String): Intent {
-        return Intent(context, this::class.java).apply {
-            putExtra(KEY_PROVIDER, provider)
         }
     }
 
@@ -60,7 +52,7 @@ fun Content(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(text = "This is Payment Activity. Provider: $provider")
-        Spacer(modifier = Modifier.height(18.dp))
+        Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onToyButtonClick) {
             Text("Go to Toy Activity")
         }
