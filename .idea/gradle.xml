@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Logger" />
             <option value="$PROJECT_DIR$/android-lib" />
+            <option value="$PROJECT_DIR$/android-lib/base" />
             <option value="$PROJECT_DIR$/android-lib/crypto" />
             <option value="$PROJECT_DIR$/android-lib/logcat-logger" />
             <option value="$PROJECT_DIR$/android-lib/navigation" />
