@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = "ToysApp"
+include ':app'
+include ':feature:feature-toys'
+include ':feature:feature-payment'
+include ':Logger'
+include ':lib:logger'
+include ':android-lib:logcat-logger'
+include ':lib:console-logger'
+include ':android-lib:crypto'
+include ':lib:crypto'
