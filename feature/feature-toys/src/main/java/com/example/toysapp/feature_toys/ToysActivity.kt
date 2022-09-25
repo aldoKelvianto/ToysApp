@@ -13,13 +13,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.toysapp.navigation.PaymentIntentProvider
 import org.koin.android.ext.android.inject
+import org.koin.android.scope.AndroidScopeComponent
+import org.koin.androidx.scope.createActivityRetainedScope
+import org.koin.core.scope.Scope
 
-class ToysActivity : ComponentActivity() {
+class ToysActivity : ComponentActivity(), AndroidScopeComponent {
+
+    override var scope: Scope? = null
 
     private val paymentIntentProvider: PaymentIntentProvider by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        createActivityRetainedScope()
         val name = intent.extras?.getString(KEY_NAME) ?: "Empty Name"
         setContent {
             Content(name, ::launchPaymentActivity)
