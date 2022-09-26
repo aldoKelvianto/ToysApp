@@ -9,6 +9,7 @@ import com.example.toysapp.feature_toys.ToysActivity
 import com.example.toysapp.logcat_logger.LogcatLogger
 import com.example.toysapp.logger.Logger
 import com.example.toysapp.navigation.PaymentIntentProvider
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 val appModule = module {
@@ -25,14 +26,16 @@ val appModule = module {
             ConsoleLogger()
         }
     }
-    scope<HashHelper> {
-        scoped<Logger> {
-            ConsoleLogger()
-        }
+    single<Logger>(named("console")) {
+        ConsoleLogger()
     }
-    scope<Base64Util> {
-        scoped<Logger> {
-            LogcatLogger()
-        }
+    single<Logger>(named("logcat")) {
+        LogcatLogger()
+    }
+    single {
+        HashHelper()
+    }
+    single {
+        Base64Util(get(named("logcat")))
     }
 }

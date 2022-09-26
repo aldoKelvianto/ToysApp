@@ -40,8 +40,8 @@ dependencies {
     implementation(projects.androidLib.navigation)
     implementation(projects.androidLib.base)
     implementation(projects.lib.logger)
-    implementation(libs.koin.android)
-
+    implementation(libs.koin.android.compose)
+    implementation(projects.lib.crypto)
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
