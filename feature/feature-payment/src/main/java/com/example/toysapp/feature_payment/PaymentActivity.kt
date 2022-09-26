@@ -67,6 +67,7 @@ fun Content(
         Button(onClick = onToyButtonClick) {
             Text("Go to Toy Activity")
         }
+        Spacer(modifier = Modifier.height(32.dp))
 
         var hashText by remember {
             mutableStateOf("This is hash result")
@@ -78,6 +79,7 @@ fun Content(
         }) {
             Text("Hash Provider")
         }
+        Spacer(modifier = Modifier.height(32.dp))
 
         var base64Text by remember {
             mutableStateOf("This is base64 encode result")
