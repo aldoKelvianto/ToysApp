@@ -9,6 +9,7 @@ java {
 }
 
 dependencies {
-    implementation(project(":lib:logger"))
+    implementation(projects.lib.logger)
+    implementation(libs.apache.commons.codec)
     implementation(libs.koin.core)
 }

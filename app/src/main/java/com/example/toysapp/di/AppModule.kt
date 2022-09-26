@@ -1,8 +1,8 @@
 package com.example.toysapp.di
 
 import com.example.toysapp.console_logger.ConsoleLogger
-import com.example.toysapp.crypto.Encoding
-import com.example.toysapp.crypto.Hashing
+import com.example.toysapp.crypto.Base64Util
+import com.example.toysapp.crypto.HashHelper
 import com.example.toysapp.feature_payment.FeatureModulePaymentIntentProvider
 import com.example.toysapp.feature_payment.PaymentActivity
 import com.example.toysapp.feature_toys.ToysActivity
@@ -25,12 +25,12 @@ val appModule = module {
             ConsoleLogger()
         }
     }
-    scope<Hashing> {
+    scope<HashHelper> {
         scoped<Logger> {
             ConsoleLogger()
         }
     }
-    scope<Encoding> {
+    scope<Base64Util> {
         scoped<Logger> {
             LogcatLogger()
         }
