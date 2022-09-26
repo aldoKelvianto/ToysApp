@@ -39,6 +39,7 @@ class PaymentActivity : KoinComposeActivity() {
         val packageName = this.packageName
         val intent = Intent(action).apply {
             setPackage(packageName)
+            putExtra("key_name", "Rubber Duck")
         }
         startActivity(intent)
     }
