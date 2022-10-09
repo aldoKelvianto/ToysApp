@@ -4,12 +4,9 @@ plugins {
 
 android {
     namespace = "com.example.toysapp"
-    compileSdk = 32
 
     defaultConfig {
         applicationId = "com.example.toysapp"
-        minSdk = 21
-        targetSdk = 32
         versionCode = 1
         versionName = "1.0"
 
@@ -27,19 +24,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "1.8"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.1"
     }
     packagingOptions {
         resources {
