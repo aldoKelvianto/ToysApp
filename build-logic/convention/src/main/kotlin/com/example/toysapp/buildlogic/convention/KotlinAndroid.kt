@@ -13,11 +13,13 @@ internal fun Project.configureKotlinAndroid(
 ) {
     val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
     commonExtension.apply {
-        compileSdk = 32
-
+        val minSdkVersion = libs.findVersion("androidMinSdk").get().toString().toInt()
         defaultConfig {
-            minSdk = 21
+            minSdk = minSdkVersion
         }
+
+        val compileSdkVersion = libs.findVersion("androidCompileSdk").get().toString().toInt()
+        compileSdk = compileSdkVersion
 
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_1_8
