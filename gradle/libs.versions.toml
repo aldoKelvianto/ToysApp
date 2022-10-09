@@ -1,5 +1,18 @@
+[versions]
+androidGradlePlugin = "7.3.0"
+koin = "3.2.1"
+kotlin = "1.6.10"
+
 [libraries]
-koin-android = "io.insert-koin:koin-android:3.2.1"
-koin-core = "io.insert-koin:koin-core:3.2.1"
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-android-compose = "io.insert-koin:koin-androidx-compose:3.2.1"
 apache-commons-codec = "commons-codec:commons-codec:1.15"
+
+# Dependencies for build-logic
+gradle-plugin-android = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+gradle-plugin-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
