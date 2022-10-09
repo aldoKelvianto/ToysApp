@@ -16,6 +16,10 @@ internal fun Project.configureKotlinAndroid(
         val minSdkVersion = libs.findVersion("androidMinSdk").get().toString().toInt()
         defaultConfig {
             minSdk = minSdkVersion
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            vectorDrawables {
+                useSupportLibrary = true
+            }
         }
 
         val compileSdkVersion = libs.findVersion("androidCompileSdk").get().toString().toInt()

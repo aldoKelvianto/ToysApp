@@ -20,5 +20,9 @@ gradlePlugin {
             id = "com.example.toysapp.convention.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "com.example.toysapp.convention.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
     }
 }

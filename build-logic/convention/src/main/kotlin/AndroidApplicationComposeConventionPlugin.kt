@@ -23,13 +23,8 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
                 }
 
                 val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
-                with(defaultConfig) {
-                    targetSdk = targetSdkVersion
-                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-                    vectorDrawables {
-                        useSupportLibrary = true
-                    }
-                }
+                defaultConfig.targetSdk = targetSdkVersion
+
                 packagingOptions {
                     resources {
                         excludes.add("/META-INF/{AL2.0,LGPL2.1}")
