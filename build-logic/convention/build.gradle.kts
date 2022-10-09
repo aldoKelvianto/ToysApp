@@ -24,5 +24,9 @@ gradlePlugin {
             id = "com.example.toysapp.convention.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("jvmLibrary") {
+            id = "com.example.toysapp.convention.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }
