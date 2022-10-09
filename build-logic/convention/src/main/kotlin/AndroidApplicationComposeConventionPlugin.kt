@@ -21,8 +21,20 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
                 configure<ApplicationExtension> {
                     configureKotlinAndroid(this)
                 }
-                val targetSdk = libs.findVersion("androidTargetSdk").get().toString().toInt()
-                defaultConfig.targetSdk = targetSdk
+
+                val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
+                with(defaultConfig) {
+                    targetSdk = targetSdkVersion
+                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+                    vectorDrawables {
+                        useSupportLibrary = true
+                    }
+                }
+                packagingOptions {
+                    resources {
+                        excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+                    }
+                }
             }
         }
     }
