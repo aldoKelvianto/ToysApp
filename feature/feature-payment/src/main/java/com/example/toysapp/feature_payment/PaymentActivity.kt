@@ -26,6 +26,7 @@ class PaymentActivity : KoinComposeActivity() {
         super.onCreate(savedInstanceState)
         logger.log("PaymentActivity - onCreate")
 
+
         val provider = intent.getStringExtra(KEY_PAYMENT_GATEWAY) ?: "Empty Provider"
         setContent {
             Content(provider, ::launchToyActivity)

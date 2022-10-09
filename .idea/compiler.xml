@@ -8,6 +8,9 @@
       <module name="Toys_App.feature.feature-payment" target="11" />
       <module name="Toys_App.feature.feature-toys" target="11" />
       <module name="ToysApp.lib.navigation" target="11" />
+      <module name="ToysApp.toysapp-conventions" target="11" />
+      <module name="ToysApp.toysapp-conventions.main" target="11" />
+      <module name="ToysApp.toysapp-conventions.test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
