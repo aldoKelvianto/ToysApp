@@ -22,7 +22,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Logger" />
             <option value="$PROJECT_DIR$/android-lib" />
             <option value="$PROJECT_DIR$/android-lib/base" />
             <option value="$PROJECT_DIR$/android-lib/crypto" />

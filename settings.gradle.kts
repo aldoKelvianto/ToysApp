@@ -17,14 +17,13 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "ToysApp"
-include ':app'
-include ':feature:feature-toys'
-include ':feature:feature-payment'
-include ':Logger'
-include ':lib:logger'
-include ':android-lib:logcat-logger'
-include ':lib:console-logger'
-include ':android-lib:crypto'
-include ':lib:crypto'
-include ':android-lib:navigation'
-include ':android-lib:base'
+include(":app")
+include(":feature:feature-toys")
+include(":feature:feature-payment")
+include(":lib:logger")
+include(":android-lib:logcat-logger")
+include(":lib:console-logger")
+include(":android-lib:crypto")
+include(":lib:crypto")
+include(":android-lib:navigation")
+include(":android-lib:base")
