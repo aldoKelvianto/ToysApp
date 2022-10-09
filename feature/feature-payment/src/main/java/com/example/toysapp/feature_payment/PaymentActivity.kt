@@ -26,7 +26,7 @@ class PaymentActivity : KoinComposeActivity() {
         super.onCreate(savedInstanceState)
         logger.log("PaymentActivity - onCreate")
 
-        val provider = intent.getStringExtra(KEY_PROVIDER) ?: "Empty Provider"
+        val provider = intent.getStringExtra(KEY_PAYMENT_GATEWAY) ?: "Empty Provider"
         setContent {
             Content(provider, ::launchToyActivity)
         }
@@ -45,13 +45,13 @@ class PaymentActivity : KoinComposeActivity() {
     }
 
     companion object {
-        const val KEY_PROVIDER = "key_provider"
+        const val KEY_PAYMENT_GATEWAY = "key_payment_gateway"
     }
 }
 
 @Composable
 fun Content(
-    provider: String = "Empty Provider",
+    provider: String = "Default Payment Gateway",
     onToyButtonClick: () -> Unit = {},
     hashHelper: HashHelper = get(),
     base64Util: Base64Util = get()
@@ -63,7 +63,7 @@ fun Content(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(text = "This is Payment Activity. Provider: $provider")
+        Text(text = "This is Payment Activity. Payment Gateway: $provider")
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onToyButtonClick) {
             Text("Go to Toy Activity")
