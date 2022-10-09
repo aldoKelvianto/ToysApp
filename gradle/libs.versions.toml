@@ -7,7 +7,6 @@ androidTargetSdk = "32"
 koin = "3.2.1"
 kotlin = "1.7.10"
 
-
 [libraries]
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
@@ -21,3 +20,5 @@ gradle-plugin-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-p
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
