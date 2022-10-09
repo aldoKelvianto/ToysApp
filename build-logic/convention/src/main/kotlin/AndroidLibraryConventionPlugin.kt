@@ -1,4 +1,5 @@
 import com.android.build.api.dsl.LibraryExtension
+import com.example.toysapp.buildlogic.convention.configureBuildTypes
 import com.example.toysapp.buildlogic.convention.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -16,15 +17,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             with(extension) {
                 configureKotlinAndroid(this)
-                buildTypes {
-                    release {
-                        isMinifyEnabled = false
-                        proguardFiles(
-                            getDefaultProguardFile("proguard-android-optimize.txt"),
-                            "proguard-rules.pro"
-                        )
-                    }
-                }
+                configureBuildTypes()
                 val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
                 with(defaultConfig) {
                     targetSdk = targetSdkVersion
