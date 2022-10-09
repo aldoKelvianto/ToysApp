@@ -1,7 +1,9 @@
 [versions]
 androidGradlePlugin = "7.3.0"
+androidComposeCompiler = "1.3.1"
 koin = "3.2.1"
 kotlin = "1.6.10"
+
 
 [libraries]
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }

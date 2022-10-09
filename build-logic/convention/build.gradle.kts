@@ -16,9 +16,9 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("androidFeature") {
-            id = "nowinandroid.android.feature"
-            implementationClass = "AndroidFeatureConventionPlugin"
+        register("androidApplicationCompose") {
+            id = "com.example.toysapp.convention.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
     }
 }
