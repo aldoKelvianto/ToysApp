@@ -10,6 +10,25 @@ import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 
+internal fun Project.configureDefaultConfigForApplication() {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+    val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
+    val extension = extensions.getByType<ApplicationExtension>()
+    extension.defaultConfig {
+        targetSdk = targetSdkVersion
+    }
+}
+
+internal fun Project.configureDefaultConfigForLibrary() {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+    val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
+    val extension = extensions.getByType<LibraryExtension>()
+    extension.defaultConfig {
+        targetSdk = targetSdkVersion
+        consumerProguardFiles("consumer-rules.pro")
+    }
+}
+
 internal fun ApplicationExtension.configureBuildTypes() {
     buildTypes {
         release {
