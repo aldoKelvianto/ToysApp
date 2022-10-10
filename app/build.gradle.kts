@@ -18,7 +18,8 @@ moduleGraphAssert {
         ":.* -> :lib:.*",
         ":.* -> :android-lib:.*",
         ":feature:.* -> :lib:.*",
-        ":feature:.* -> :android-lib:.*"
+        ":feature:.* -> :android-lib:.*",
+        ":app -> :feature:.*"
     )
     restricted = arrayOf(
         ":feature:.* -X> :feature:.*",
