@@ -5,6 +5,7 @@ androidMinSdk = "21"
 androidCompileSdk = "33"
 androidTargetSdk = "33"
 composeUiVersion = "1.2.1"
+dependencyAnalysis = "1.13.1"
 koin = "3.2.1"
 kotlin = "1.7.10"
 
@@ -33,3 +34,4 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }

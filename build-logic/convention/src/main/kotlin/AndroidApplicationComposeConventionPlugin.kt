@@ -1,7 +1,7 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.example.toysapp.buildlogic.convention.*
 import com.example.toysapp.buildlogic.convention.configureAndroidCompose
 import com.example.toysapp.buildlogic.convention.configureBuildTypes
+import com.example.toysapp.buildlogic.convention.configureDefaultConfig
 import com.example.toysapp.buildlogic.convention.configureKotlin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -17,7 +17,7 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
             }
-            
+
             extensions.configure<ApplicationExtension> {
                 configureDefaultConfig(this)
                 configureBuildTypes(this)
