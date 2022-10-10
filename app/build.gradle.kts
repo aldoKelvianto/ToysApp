@@ -13,7 +13,7 @@ android {
 }
 
 moduleGraphAssert {
-    maxHeight = 4
+    maxHeight = 3
     allowed = arrayOf(
         ":.* -> :lib:.*",
         ":.* -> :android-lib:.*",
@@ -26,9 +26,6 @@ moduleGraphAssert {
         ":android-lib:.* -X> :feature:.*",
         ":lib:.* -X> :feature:.*"
     )
-    configurations = setOf("api", "implementation")
-    assertOnAnyBuild =
-        false // true value will run the assertions as part of any build without need to run the assert* tasks, false is default
 }
 
 dependencies {
