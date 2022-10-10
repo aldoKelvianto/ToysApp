@@ -6,13 +6,11 @@ import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.getByType
 
-internal fun Project.configureApplicationExtensionForApplication() {
+internal fun Project.configureBuildTypes(extension: ApplicationExtension) {
     val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
-    val extension = extensions.getByType<ApplicationExtension>()
     with(extension) {
         val compileSdkVersion = libs.findVersion("androidCompileSdk").get().toString().toInt()
         compileSdk = compileSdkVersion
-
         buildTypes {
             release {
                 isMinifyEnabled = false
@@ -22,29 +20,14 @@ internal fun Project.configureApplicationExtensionForApplication() {
                 )
             }
         }
-
-        defaultConfig {
-            val minSdkVersion = libs.findVersion("androidMinSdk").get().toString().toInt()
-            val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
-
-            minSdk = minSdkVersion
-            targetSdk = targetSdkVersion
-            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-            vectorDrawables {
-                useSupportLibrary = true
-            }
-        }
     }
-
 }
 
-internal fun Project.configureLibraryExtensionForApplication() {
+internal fun Project.configureBuildTypes(extension: LibraryExtension) {
     val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
-    val extension = extensions.getByType<LibraryExtension>()
     with(extension) {
         val compileSdkVersion = libs.findVersion("androidCompileSdk").get().toString().toInt()
         compileSdk = compileSdkVersion
-
         buildTypes {
             release {
                 isMinifyEnabled = false
@@ -54,19 +37,45 @@ internal fun Project.configureLibraryExtensionForApplication() {
                 )
             }
         }
+        packagingOptions {
+            resources {
+                excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+            }
+        }
+    }
+}
 
+internal fun Project.configureDefaultConfig(extension: ApplicationExtension) {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+    with(extension) {
         defaultConfig {
             val minSdkVersion = libs.findVersion("androidMinSdk").get().toString().toInt()
             val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
 
             minSdk = minSdkVersion
             targetSdk = targetSdkVersion
-            consumerProguardFiles("consumer-rules.pro")
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
             vectorDrawables {
                 useSupportLibrary = true
             }
         }
     }
+}
 
+internal fun Project.configureDefaultConfig(extension: LibraryExtension) {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+    with(extension) {
+        defaultConfig {
+            val minSdkVersion = libs.findVersion("androidMinSdk").get().toString().toInt()
+            val targetSdkVersion = libs.findVersion("androidTargetSdk").get().toString().toInt()
+
+            minSdk = minSdkVersion
+            targetSdk = targetSdkVersion
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            consumerProguardFiles("consumer-rules.pro")
+            vectorDrawables {
+                useSupportLibrary = true
+            }
+        }
+    }
 }

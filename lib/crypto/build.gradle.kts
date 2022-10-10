@@ -6,5 +6,4 @@ dependencies {
     implementation(projects.lib.logger)
     implementation(libs.apache.commons.codec)
     implementation(libs.koin.core)
-    testImplementation(libs.junit)
 }
