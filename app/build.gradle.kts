@@ -12,6 +12,24 @@ android {
     }
 }
 
+moduleGraphAssert {
+    maxHeight = 4
+    allowed = arrayOf(
+        ":.* -> :lib:.*",
+        ":.* -> :android-lib:.*",
+        ":feature:.* -> :lib:.*",
+        ":feature:.* -> :android-lib:.*"
+    )
+    restricted = arrayOf(
+        ":feature:.* -X> :feature:.*",
+        ":android-lib:.* -X> :feature:.*",
+        ":lib:.* -X> :feature:.*"
+    )
+    configurations = setOf("api", "implementation")
+    assertOnAnyBuild =
+        false // true value will run the assertions as part of any build without need to run the assert* tasks, false is default
+}
+
 dependencies {
     implementation(libs.koin.android)
     implementation(projects.feature.featurePayment)
