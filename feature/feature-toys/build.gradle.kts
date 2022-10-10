@@ -44,14 +44,9 @@ dependencies {
     implementation(projects.androidLib.base)
     implementation(projects.lib.logger)
     implementation(libs.koin.android)
-    val compose_ui_version = rootProject.extra["compose_ui_version"]
+    implementation(libs.bundles.compose)
 
-    implementation("androidx.activity:activity-compose:1.3.1")
-    implementation("androidx.compose.ui:ui:$compose_ui_version")
-    implementation("androidx.compose.ui:ui-tooling-preview:$compose_ui_version")
-    implementation("androidx.compose.material:material:1.1.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$compose_ui_version")
 }

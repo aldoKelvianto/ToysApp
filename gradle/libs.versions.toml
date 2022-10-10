@@ -2,8 +2,8 @@
 androidGradlePlugin = "7.3.0"
 androidComposeCompiler = "1.3.1"
 androidMinSdk = "21"
-androidCompileSdk = "32"
-androidTargetSdk = "32"
+androidCompileSdk = "33"
+androidTargetSdk = "33"
 composeUiVersion = "1.2.1"
 koin = "3.2.1"
 kotlin = "1.7.10"
@@ -12,10 +12,10 @@ kotlin = "1.7.10"
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-android-compose = "io.insert-koin:koin-androidx-compose:3.2.1"
-compose-activity = "androidx.activity:activity-compose:1.3.1"
+compose-activity = "androidx.activity:activity-compose:1.6.0"
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "composeUiVersion" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeUiVersion" }
-compose-material = "androidx.compose.material:material:1.1.1"
+compose-material = "androidx.compose.material:material:1.2.1"
 apache-commons-codec = "commons-codec:commons-codec:1.15"
 
 # Dependencies for build-logic
