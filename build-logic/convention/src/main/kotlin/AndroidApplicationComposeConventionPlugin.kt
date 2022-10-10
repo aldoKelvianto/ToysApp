@@ -5,7 +5,8 @@ import com.example.toysapp.buildlogic.convention.configureDefaultConfigForApplic
 import com.example.toysapp.buildlogic.convention.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
+import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
 class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
@@ -20,15 +21,19 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
 
             with(extension) {
                 configureAndroidCompose(this)
-                configure<ApplicationExtension> {
-                    configureKotlinAndroid(this)
-                }
+                configureKotlinAndroid(this)
                 configureBuildTypes()
                 packagingOptions {
                     resources {
                         excludes.add("/META-INF/{AL2.0,LGPL2.1}")
                     }
                 }
+            }
+
+            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+            dependencies {
+
+
             }
         }
     }
