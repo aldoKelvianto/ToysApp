@@ -6,8 +6,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,21 +14,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.toysapp.feature_payment.PaymentActivity
 import com.example.toysapp.feature_toys.ToysActivity
-import com.example.toysapp.ui.theme.ToysAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ToysAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Content(::launchToyActivity, ::launchPaymentActivity)
-                }
-            }
+            Content(::launchToyActivity, ::launchPaymentActivity)
         }
     }
 
@@ -72,7 +61,5 @@ fun Content(
 @Preview(showBackground = true)
 @Composable
 fun ContentPreview() {
-    ToysAppTheme {
-        Content()
-    }
+    Content()
 }
