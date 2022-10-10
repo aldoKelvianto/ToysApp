@@ -33,6 +33,9 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
                 add("implementation", libs.findBundle("compose").get())
+                add("testImplementation", libs.findLibrary("junit").get())
+                add("androidTestImplementation", libs.findLibrary("androidJunit").get())
+                add("androidTestImplementation", libs.findLibrary("androidEspresso").get())
             }
         }
     }

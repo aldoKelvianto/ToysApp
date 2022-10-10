@@ -21,8 +21,4 @@ dependencies {
     implementation(projects.lib.logger)
     implementation(projects.androidLib.logcatLogger)
     implementation(projects.androidLib.navigation)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidJunit)
-    androidTestImplementation(libs.androidEspresso)
 }
