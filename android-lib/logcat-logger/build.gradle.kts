@@ -8,4 +8,7 @@ android {
 
 dependencies {
     implementation(projects.lib.logger)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidJunit)
+    androidTestImplementation(libs.androidEspresso)
 }

@@ -4,4 +4,5 @@ plugins {
 
 dependencies {
     implementation(projects.lib.logger)
+    testImplementation(libs.junit)
 }

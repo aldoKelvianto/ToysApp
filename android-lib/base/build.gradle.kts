@@ -8,4 +8,7 @@ android {
 
 dependencies {
     implementation(libs.koin.android)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidJunit)
+    androidTestImplementation(libs.androidEspresso)
 }

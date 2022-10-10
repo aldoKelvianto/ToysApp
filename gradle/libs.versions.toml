@@ -17,6 +17,9 @@ compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compos
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeUiVersion" }
 compose-material = "androidx.compose.material:material:1.2.1"
 apache-commons-codec = "commons-codec:commons-codec:1.15"
+junit = "junit:junit:4.13.2"
+androidJunit = "androidx.test.ext:junit:1.1.3"
+androidEspresso = "androidx.test.espresso:espresso-core:3.4.0"
 
 # Dependencies for build-logic
 gradle-plugin-android = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
