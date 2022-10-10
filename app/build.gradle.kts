@@ -10,16 +10,6 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
 }
 
 dependencies {
@@ -32,7 +22,6 @@ dependencies {
     implementation(projects.androidLib.logcatLogger)
     implementation(projects.androidLib.navigation)
 
-    implementation(libs.bundles.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidJunit)
     androidTestImplementation(libs.androidEspresso)

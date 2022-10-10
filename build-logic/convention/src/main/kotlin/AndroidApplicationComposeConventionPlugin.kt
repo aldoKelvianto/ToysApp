@@ -32,8 +32,7 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
-
-
+                add("implementation", libs.findBundle("compose").get())
             }
         }
     }
