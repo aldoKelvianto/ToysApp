@@ -2,6 +2,7 @@ package com.example.toysapp.feature_payment
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -11,14 +12,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.toysapp.base.KoinComposeActivity
 import com.example.toysapp.crypto.Base64Util
 import com.example.toysapp.crypto.HashHelper
 import com.example.toysapp.logger.Logger
 import org.koin.android.ext.android.inject
 import org.koin.androidx.compose.get
 
-class PaymentActivity : KoinComposeActivity() {
+class PaymentActivity : ComponentActivity() {
 
     private val logger: Logger by inject()
 
