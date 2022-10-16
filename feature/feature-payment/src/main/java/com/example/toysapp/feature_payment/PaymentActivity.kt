@@ -36,9 +36,8 @@ class PaymentActivity : ComponentActivity() {
         val action = "com.example.toysapp.launch.toy.activity"
         // packageName is the application id, so the value is
         // com.example.toysapp , not com.example.toysapp.feature_payment
-        val packageName = this.packageName
         val intent = Intent(action).apply {
-            setPackage(packageName)
+            setPackage(this@PaymentActivity.packageName)
             putExtra("key_name", "Rubber Duck")
         }
         startActivity(intent)
