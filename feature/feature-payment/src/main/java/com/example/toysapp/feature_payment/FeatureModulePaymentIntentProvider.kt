@@ -6,7 +6,7 @@ import com.example.toysapp.navigation.PaymentIntentProvider
 
 class FeatureModulePaymentIntentProvider : PaymentIntentProvider {
 
-    override fun providePaymentIntent(context: Context, paymentGateway: String): Intent {
+    override fun getPaymentIntent(context: Context, paymentGateway: String): Intent {
         return Intent(context, PaymentActivity::class.java).apply {
             putExtra(PaymentActivity.KEY_PAYMENT_GATEWAY, paymentGateway)
         }

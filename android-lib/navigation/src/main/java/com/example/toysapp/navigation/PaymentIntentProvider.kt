@@ -5,5 +5,5 @@ import android.content.Intent
 
 interface PaymentIntentProvider {
 
-    fun providePaymentIntent(context: Context, paymentGateway: String): Intent
+    fun getPaymentIntent(context: Context, paymentGateway: String): Intent
 }

@@ -31,7 +31,7 @@ class ToysActivity : KoinComposeActivity() {
     }
 
     private fun launchPaymentActivity() {
-        val intent = paymentIntentProvider.providePaymentIntent(this, "Stripe")
+        val intent = paymentIntentProvider.getPaymentIntent(this, "Stripe")
         startActivity(intent)
     }
 
