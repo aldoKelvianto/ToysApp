@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import com.example.toysapp.navigation.PaymentIntentProvider
 
-class FeatureModulePaymentIntentProvider : PaymentIntentProvider {
+class PaymentIntentProviderImpl : PaymentIntentProvider {
 
     override fun getPaymentIntent(context: Context, paymentGateway: String): Intent {
         return Intent(context, PaymentActivity::class.java).apply {
