@@ -7,3 +7,8 @@ Modularization" presentation. This project demonstrates the following:
 2. How to use convention plugin
 3. How to navigate between activities in a multimodule project
 4. How to use Koin and Koin scope in a multimodule project
+
+# Publication
+
+## Android Worldwide
+You can access the presentation file in this repository: [presentation.pdf](presentation.pdf)
