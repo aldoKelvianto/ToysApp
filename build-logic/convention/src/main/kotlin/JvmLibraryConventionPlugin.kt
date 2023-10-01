@@ -14,10 +14,10 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
                 apply("java-library")
                 apply("org.jetbrains.kotlin.jvm")
             }
-            
+
             extensions.configure("java", Action<JavaPluginExtension> {
-                sourceCompatibility = JavaVersion.VERSION_1_8
-                targetCompatibility = JavaVersion.VERSION_1_8
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
             })
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")

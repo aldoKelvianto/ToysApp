@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel target="17">
       <module name="Toys_App.android-lib.crypto" target="11" />
       <module name="Toys_App.android-lib.logcat-logger" target="11" />
       <module name="Toys_App.app" target="11" />
