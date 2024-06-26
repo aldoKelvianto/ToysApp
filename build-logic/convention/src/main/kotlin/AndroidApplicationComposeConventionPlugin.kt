@@ -17,6 +17,7 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
                 apply("com.jraska.module.graph.assertion")
+                apply("org.jetbrains.kotlin.plugin.compose")
             }
 
             extensions.configure<ApplicationExtension> {

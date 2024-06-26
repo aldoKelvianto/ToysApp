@@ -7,7 +7,7 @@ androidTargetSdk = "33"
 composeUiVersion = "1.2.1"
 dependencyAnalysis = "1.13.1"
 koin = "3.2.1"
-kotlin = "1.7.10"
+kotlin = "2.0.0"
 
 [libraries]
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
@@ -25,6 +25,7 @@ androidEspresso = "androidx.test.espresso:espresso-core:3.4.0"
 # Dependencies for build-logic
 gradle-plugin-android = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 gradle-plugin-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-plugin-compose-compiler = { group = "org.jetbrains.kotlin", name = "compose-compiler-gradle-plugin", version.ref = "kotlin" }
 
 [bundles]
 compose = ["compose-activity", "compose-ui", "compose-ui-tooling", "compose-material"]
@@ -36,3 +37,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }
 module-graph-assertion = "com.jraska.module.graph.assertion:2.3.0"
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
