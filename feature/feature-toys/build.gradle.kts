@@ -11,5 +11,4 @@ dependencies {
     implementation(projects.androidLib.base)
     implementation(projects.lib.logger)
     implementation(libs.koin.android)
-    implementation(libs.bundles.compose)
 }

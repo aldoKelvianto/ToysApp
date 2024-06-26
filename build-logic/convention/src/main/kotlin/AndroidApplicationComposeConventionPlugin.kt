@@ -29,6 +29,8 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
+                val composeBom = platform(libs.findLibrary("androidx-compose-bom").get())
+                add("implementation", composeBom)
                 add("implementation", libs.findBundle("compose").get())
                 add("testImplementation", libs.findLibrary("junit").get())
                 add("androidTestImplementation", libs.findLibrary("androidJunit").get())
