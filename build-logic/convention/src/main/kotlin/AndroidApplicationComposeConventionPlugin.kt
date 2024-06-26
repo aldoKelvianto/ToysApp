@@ -23,7 +23,7 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
             extensions.configure<ApplicationExtension> {
                 configureDefaultConfig(this)
                 configureBuildTypes(this)
-                configureAndroidCompose(this)
+                configureAndroidCompose()
                 configureKotlin(this)
             }
 
