@@ -11,7 +11,7 @@ public final class LogcatLogger implements Logger {
     private static final String TAG = "LogcatLogger";
 
     @Override
-    public void log(@NotNull String message) {
+    public final void log(@NotNull String message) {
         Log.d(TAG, "Log from LogcatLogger: " + message);
     }
 }

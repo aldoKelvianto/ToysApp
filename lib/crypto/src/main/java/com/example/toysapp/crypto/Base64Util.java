@@ -12,7 +12,7 @@ public final class Base64Util {
         this.logger = logger;
     }
 
-    public String encodeToBase64(String text) {
+    public final String encodeToBase64(String text) {
         logger.log("EncoderUtil - encodeToBase64");
 
         Base64 base64 = new Base64();
