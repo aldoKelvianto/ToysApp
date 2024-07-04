@@ -5,12 +5,8 @@ public final class com/example/toysapp/logcat_logger/BuildConfig {
 	public fun <init> ()V
 }
 
-public final class com/example/toysapp/logcat_logger/LogcatLogger : com/example/toysapp/logger/Logger {
-	public static final field Companion Lcom/example/toysapp/logcat_logger/LogcatLogger$Companion;
+public class com/example/toysapp/logcat_logger/LogcatLogger : com/example/toysapp/logger/Logger {
 	public fun <init> ()V
 	public fun log (Ljava/lang/String;)V
-}
-
-public final class com/example/toysapp/logcat_logger/LogcatLogger$Companion {
 }
 
