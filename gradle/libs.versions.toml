@@ -5,7 +5,7 @@ androidMinSdk = "21"
 androidCompileSdk = "34"
 androidTargetSdk = "34"
 composeUiVersion = "1.2.1"
-dependencyAnalysis = "1.13.1"
+dependencyAnalysis = "1.32.0"
 koin = "3.2.1"
 kotlin = "2.0.0"
 
