@@ -1,4 +1,4 @@
-public class com/example/toysapp/crypto/Base64Util {
+public final class com/example/toysapp/crypto/Base64Util {
 	public fun <init> (Lcom/example/toysapp/logger/Logger;)V
 	public fun encodeToBase64 (Ljava/lang/String;)Ljava/lang/String;
 }

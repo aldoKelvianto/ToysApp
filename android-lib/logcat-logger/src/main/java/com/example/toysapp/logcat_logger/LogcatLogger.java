@@ -6,7 +6,7 @@ import com.example.toysapp.logger.Logger;
 
 import org.jetbrains.annotations.NotNull;
 
-public class LogcatLogger implements Logger {
+public final class LogcatLogger implements Logger {
 
     private static final String TAG = "LogcatLogger";
 

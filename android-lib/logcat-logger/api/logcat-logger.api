@@ -5,7 +5,7 @@ public final class com/example/toysapp/logcat_logger/BuildConfig {
 	public fun <init> ()V
 }
 
-public class com/example/toysapp/logcat_logger/LogcatLogger : com/example/toysapp/logger/Logger {
+public final class com/example/toysapp/logcat_logger/LogcatLogger : com/example/toysapp/logger/Logger {
 	public fun <init> ()V
 	public fun log (Ljava/lang/String;)V
 }

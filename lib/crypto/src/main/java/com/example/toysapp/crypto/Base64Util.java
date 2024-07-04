@@ -4,7 +4,7 @@ import com.example.toysapp.logger.Logger;
 
 import org.apache.commons.codec.binary.Base64;
 
-public class Base64Util {
+public final class Base64Util {
 
     private final Logger logger;
 
