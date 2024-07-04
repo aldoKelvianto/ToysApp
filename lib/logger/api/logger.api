@@ -1,0 +1,4 @@
+public abstract interface class com/example/toysapp/logger/Logger {
+	public abstract fun log (Ljava/lang/String;)V
+}
+
