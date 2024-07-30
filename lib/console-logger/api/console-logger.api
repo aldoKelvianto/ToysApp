@@ -3,3 +3,20 @@ public final class com/example/toysapp/console_logger/ConsoleLogger : com/exampl
 	public fun log (Ljava/lang/String;)V
 }
 
+public class com/example/toysapp/console_logger/NQueensSolver {
+	public fun <init> ()V
+	public static fun main ([Ljava/lang/String;)V
+	public fun solveNQueens (I)Ljava/util/List;
+}
+
+public final class com/example/toysapp/consolelogger/NQueensSolver {
+	public static final field Companion Lcom/example/toysapp/consolelogger/NQueensSolver$Companion;
+	public fun <init> ()V
+	public static final fun main ([Ljava/lang/String;)V
+	public final fun solveNQueens (I)Ljava/util/List;
+}
+
+public final class com/example/toysapp/consolelogger/NQueensSolver$Companion {
+	public final fun main ([Ljava/lang/String;)V
+}
+
