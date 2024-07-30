@@ -20,6 +20,7 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview
 compose-material = { group = "androidx.compose.material", name = "material" }
 apache-commons-codec = "commons-codec:commons-codec:1.15"
 junit = "junit:junit:4.13.2"
+junit5 = "org.junit.jupiter:junit-jupiter-engine:5.10.3"
 androidJunit = "androidx.test.ext:junit:1.1.3"
 androidEspresso = "androidx.test.espresso:espresso-core:3.4.0"
 
@@ -37,6 +38,6 @@ android-library = { id = "com.android.library", version.ref = "androidGradlePlug
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }
-binary-compatibility-validator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.15.0-Beta.3"
+binary-compatibility-validator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.16.2"
 module-graph-assertion = "com.jraska.module.graph.assertion:2.3.0"
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
