@@ -1,11 +1,11 @@
 [versions]
-androidGradlePlugin = "8.8.0"
+androidGradlePlugin = "8.8.1"
 androidxComposeBom = "2025.02.00"
 androidMinSdk = "21"
 androidCompileSdk = "35"
 androidTargetSdk = "35"
 composeUiVersion = "1.2.1"
-dependencyAnalysis = "1.32.0"
+buildHealth = "2.8.2"
 koin = "3.2.2"
 kotlin = "2.1.10"
 
@@ -37,7 +37,7 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }
+build-health = { id = "com.autonomousapps.build-health", version.ref = "buildHealth" }
 binary-compatibility-validator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.16.2"
 module-graph-assertion = "com.jraska.module.graph.assertion:2.3.0"
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
