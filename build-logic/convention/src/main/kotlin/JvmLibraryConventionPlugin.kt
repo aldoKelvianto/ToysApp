@@ -16,8 +16,8 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
             }
 
             extensions.configure("java", Action<JavaPluginExtension> {
-                sourceCompatibility = JavaVersion.VERSION_17
-                targetCompatibility = JavaVersion.VERSION_17
+                sourceCompatibility = JavaVersion.VERSION_21
+                targetCompatibility = JavaVersion.VERSION_21
             })
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
